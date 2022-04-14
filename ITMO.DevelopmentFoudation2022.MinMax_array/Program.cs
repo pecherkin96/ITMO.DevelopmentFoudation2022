@@ -10,22 +10,21 @@ namespace ITMO.DevelopmentFoudation2022.MinMax_array
     {
         static void Main(string[] args)
         {
-            int[] M = new int[] { 11, 4, 34, 10, 19, 7, 9, 26 };
             int Min = M[1];
             int Max = M[1];
-            for (int i = 2; i <= M.Length - 1; i ++)
+            for (int i = 2; i <= n; i + 1)
             {
                 if(Max < M[i])
                 {
                     Max = M[i];
+                    indMax = i;
                 }
                 if(Min > M[i])
                 {
                     Min = M[i];
+                    indMin = i;
                 }
             }
-            Console.WriteLine(Max);
-            Console.WriteLine(Min);
         }
     }
 }
